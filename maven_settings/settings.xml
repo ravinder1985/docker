@@ -1,0 +1,67 @@
+<settings>
+<servers>
+<server>
+<id>cimrepo</id>
+<username>deployment</username>
+<password>x3m7u8p8e0</password>
+</server>
+<server>
+<id>cimrepo-snapshots</id>
+<username>deployment</username>
+<password>x3m7u8p8e0</password>
+</server>
+</servers>
+<profiles>
+   <profile>
+     <id>comcast</id>
+    
+<repositories>
+       <repository>
+         <id>clojars.org</id>
+         <url>http://clojars.org/repo</url>
+       </repository>
+       
+       <repository>
+         <id>cimrepo</id>
+         <name>CIM Maven Reposiotry</name>
+         <url>http://repo.dev.cim.comcast.net/nexus/content/repositories/releases</url>
+         <releases>
+           <enabled>true</enabled>
+           <updatePolicy>never</updatePolicy>
+         </releases>
+         <snapshots>
+           <enabled>false</enabled>
+         </snapshots>
+       </repository>
+      
+       <repository>
+         <id>cimrepo-snapshots</id>
+         <name>CIM Maven Reposiotry</name>         
+         <url>http://repo.dev.cim.comcast.net/nexus/content/repositories/snapshots</url>
+         <releases>
+           <enabled>false</enabled>
+         </releases>
+         <snapshots>
+           <enabled>true</enabled>
+           <updatePolicy>daily</updatePolicy>
+         </snapshots>
+       </repository>
+ 
+</repositories>
+   </profile>
+         <profile>
+     <id>not-comcast</id>
+         </profile>
+</profiles>
+<activeProfiles>
+   <activeProfile>comcast</activeProfile>
+</activeProfiles>
+<mirrors>
+<mirror>
+<id>CimInternal</id>
+<name>Cim Nexus Public Mirror</name>
+<url>http://repo.dev.cim.comcast.net/nexus/content/groups/public</url>
+<mirrorOf>external:*</mirrorOf>
+</mirror>
+</mirrors>
+</settings>
