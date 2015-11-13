@@ -1,0 +1,10 @@
+jsonschema
+nose
+requests
+wsgiref
+argparse
+importlib
+nuriko
+beautifulsoup4
+kafka-python
+sphinx
