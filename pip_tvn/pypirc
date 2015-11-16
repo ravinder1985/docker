@@ -1,8 +1,0 @@
-[distutils]
-index-servers =
-  local
-
-[local]
-repository: http://96.119.1.96:8888
-username:
-password:
