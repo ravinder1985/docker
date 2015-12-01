@@ -4,11 +4,12 @@ RUN apt-get update && apt-get install -y \
 			vim  \
 			openjdk-7-jdk \
 			git \
-			maven \
 			python-pip \
 			python-dev \
 			build-essential \
-			wget
+			wget \
+			docker.io
+RUN ln -sf /usr/bin/docker.io /usr/local/bin/docker
 RUN pip install --upgrade pip \
 			  virtualenv
 RUN pip install jsonschema \
